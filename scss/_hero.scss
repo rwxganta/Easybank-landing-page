@@ -1,0 +1,102 @@
+.hero {
+    background-color: $Very-Light-Gray;
+
+    &__image {
+        height: 17rem;
+        background-image: url(../images/bg-intro-mobile.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+
+        &::before {
+            //outline: 3px dotted red;
+            //outline-offset: -3px;
+            content: '';
+            margin-inline: .5rem;
+            position: absolute;
+            inset: 0;
+            background-image: url(../images/image-mockups.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center bottom;
+        }
+
+    }
+
+    &__text {
+        margin-block: 3.25rem;
+        margin-inline: 2rem;
+        text-align: center;
+
+        .hero__title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            line-height: 1.1;
+            color: $Dark-Blue;
+            text-wrap: balance;
+        }
+
+        .hero__desc {
+            margin-inline: auto;
+            line-height: 1.5;
+        }
+    }
+}
+
+
+@include breakpoint-up(large) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .hero {
+        display: flex;
+        
+        &__image {
+            //outline: 2px dotted greenyellow;
+            outline-offset: -2px;
+            height: 33rem;
+            order: 2;
+            flex-grow: 1;
+
+            background-image: url(../images/bg-intro-desktop.svg);
+            background-size: 135%;
+            background-position: left 20% bottom 35%;
+
+            &::before {
+                outline: 2px dotted lightseagreen;
+                outline-offset: -2px;
+                margin-inline: unset;
+                content: url(../images/image-mockups.png);
+                top: -27%;
+                left: 10%;
+                //top: 20%;
+                //background-size: 80%;
+                //background-position: center bottom 50%;
+
+                background-image: none;
+                background-repeat: none;
+                background-size: none;
+                background-position: none;
+            }
+        }
+
+        &__text {
+            margin-inline: unset;
+            padding-inline-start: 10rem;
+            padding-inline-end: 4rem;
+            width: 37rem;
+            text-align: left;
+
+            .hero__title {
+                font-size: 3rem;
+            }
+
+            .hero__desc {
+                margin-inline: unset;
+            }
+        }
+    }
+
+}

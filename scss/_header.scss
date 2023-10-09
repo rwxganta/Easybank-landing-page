@@ -1,0 +1,174 @@
+.header {
+    //outline: 3px dotted lightseagreen;
+    //outline-offset: -2px;
+
+    nav {
+        //outline: 3px dotted lightseagreen;
+        //outline-offset: -2px;
+        //padding: 2.4rem;
+        padding-inline: 2.4rem;
+        min-height: 4.8rem;
+        //height: 100%;
+        position: relative;
+    }
+
+    &__logo {
+        img {
+            width: 8.8125rem;
+            height: 1.375rem;
+        }
+    }
+
+    // mobile menu
+    &__menu {
+        padding: .5rem;
+
+        > span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $Dark-Blue;
+            transition-property: opacity, transform;
+            transform-origin: .16rem center;
+            transition: 200ms ease-in-out;
+
+            &:not(:last-child) {
+                margin-block-end: 5px;
+            }
+        }
+
+        &.open {
+            // PS. They give us .svgs for the hamburger
+            // maybe TODO: replace spans with proper .svg
+            > span:first-child {
+                transform: rotate(45deg);
+            }
+
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+
+            > span:last-child {
+                //transform-origin: left center;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &__links {
+        //display: flex;
+        //align-items: center;
+        gap: .6rem;
+        align-self: stretch;
+
+        > a {
+            //outline: 1px dotted steelblue;
+            //display: inline-block;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: $font-small;
+            color: $Grayish-Blue;
+            transition: color 200ms ease-in-out;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                //border-radius: 100vh;
+                bottom: 0;
+                // can't transition display .-.
+                //display: none;
+                background-image: linear-gradient(
+                    to right,
+                    hsl(136, 65%, 51%), hsl(192, 70%, 51%)
+                );
+                opacity: 0;
+                visibility: hidden;
+                transition-property: opacity, visibility;
+                transition: 200ms ease-in-out;
+            }
+
+            &:hover {
+                color: $Dark-Blue;
+            }
+
+            &:hover::before {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    // TODO: try to use the MENU that already exist in the nav
+    &__menu-mobile {
+        padding-block: 1.625rem;
+        text-align: center;
+        background-color: $White;
+        //background-color: springgreen;
+        border-radius: 7px;
+        display: grid;
+        gap: 1rem;
+        align-items: center;
+
+        position: fixed;
+        width: calc(100% - 2rem);
+        max-width: 30rem;
+        top: 6rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+
+        opacity: 0;
+        visibility: 0;
+        transition-property: opacity, visibility;
+        transition: 200ms ease-in-out;
+
+        a {
+            font-weight: 400;
+            color: $Dark-Blue;
+        }
+    }
+
+    &.open &__menu-hover {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__cta {
+        font-size: $font-small;
+        color: $White;
+    }
+}
+
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    top: 100%;
+    min-height: calc(100dvh - 4.8rem);
+    background-image: linear-gradient(
+        to bottom,
+        hsla(233, 26%, 24%, 0.6) 35%,
+        hsla(233, 26%, 24%, 0.3) 65%,
+        transparent
+    );
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition-property: opacity, visibility;
+    transform-origin: top center;
+    transition: 200ms ease-in-out;
+}
+
+.header__menu.open ~ .overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.header__menu.open ~ .header__menu-mobile {
+    opacity: 1;
+    visibility: visible;
+}
