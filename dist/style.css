@@ -277,4 +277,72 @@ a {
   .hero__text .hero__desc {
     margin-inline: unset;
   }
+}
+.features {
+  --gap: 2rem;
+  padding-block: 4rem;
+  padding-inline: 2rem;
+  text-align: center;
+  text-wrap: balance;
+  background-color: hsl(220, 16%, 96%);
+}
+.features h2 {
+  font-weight: 300;
+  color: hsl(233, 26%, 24%);
+}
+.features p {
+  font-size: 1rem;
+}
+@media (min-width: 64em) {
+  .features {
+    padding-inline: 10rem;
+    text-align: left;
+  }
+  .features p {
+    margin-block-end: 4rem;
+    max-width: 50ch;
+  }
+}
+.features__grid {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+@media (min-width: 40em) {
+  .features__grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 64em) {
+  .features__grid {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 40em) {
+  .feature {
+    flex-basis: calc(50% - var(--gap));
+  }
+}
+@media (min-width: 64em) {
+  .feature {
+    flex-basis: 100%;
+    align-items: start;
+  }
+}
+.feature__title {
+  font-weight: 300;
+  color: hsl(233, 26%, 24%);
+}
+.feature__desc {
+  line-height: 1.5;
 }/*# sourceMappingURL=style.css.map */

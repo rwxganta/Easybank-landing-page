@@ -1,0 +1,72 @@
+.features {
+    --gap: 2rem;
+    padding-block: 4rem;
+    padding-inline: 2rem;
+    text-align: center;
+    text-wrap: balance;
+    background-color: $Light-Grayish-Blue;
+
+    h2 {
+        font-weight: 300;
+        color: $Dark-Blue;
+    }
+
+    p {
+        font-size: $font-xsmall;
+    }
+
+
+    @include breakpoint-up(large) {
+        padding-inline: 10rem;
+        text-align: left;
+
+        p {
+            margin-block-end: 4rem;
+            max-width: 50ch;
+        }
+    }
+
+    &__grid {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+
+
+        @include breakpoint-up(medium) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @include breakpoint-up(large) {
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint-up(medium) {
+        flex-basis: calc(50% - var(--gap));
+    }
+
+    @include breakpoint-up(large) {
+        flex-basis: 100%;
+        align-items: start;
+    }
+
+    &__title {
+        font-weight: 300;
+        color: $Dark-Blue;
+    }
+
+    &__desc {
+        line-height: 1.5;
+    }
+}
