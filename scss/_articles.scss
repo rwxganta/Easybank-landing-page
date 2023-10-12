@@ -1,0 +1,92 @@
+.articles {
+    padding-block: 5rem;
+    padding-inline: 1.5rem;
+    background-color: $Very-Light-Gray;
+
+    &__title {
+        font-weight: 300;
+        color: $Dark-Blue;
+    }
+
+    @include breakpoint-up(medium) {
+        padding-block: 5rem;
+        padding-inline: 5rem;
+    }
+
+    @include breakpoint-up(large) {
+        padding-block: 5.6rem;
+        padding-inline: 10rem;
+    }
+    
+    &__list {
+        --gap: 1.75rem;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+
+        @include breakpoint-up(medium) {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        @include breakpoint-up(large) {
+            flex-wrap: nowrap;
+        }
+
+        .article {
+            border-radius: 5px;
+            overflow: hidden;
+
+            @include breakpoint-up(medium) {
+                flex-basis: calc(50% - var(--gap));
+            }
+
+            @include breakpoint-up(large) {
+                flex-basis: 100%;
+            }
+
+            &__image {
+                outline-offset: -2px;
+                height: 12rem;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            &__body {
+                padding: 1.7rem;
+                background-color: $White;
+            }
+
+            &__author {
+                font-size: .7rem;
+            }
+
+            &__title {
+                font-size: $font-xsmall;
+                font-weight: 300;
+                color: $Dark-Blue;
+                text-wrap: balance;
+            }
+
+            &__text {
+                font-size: $font-small;
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                //line-clamp: 3;
+                // line-clamp still under working group preparation
+                // -webkit-line-clamp works fine on all modern web browser .-.
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+}
