@@ -220,8 +220,8 @@ a {
   background-position: center bottom;
 }
 .hero__text {
-  margin-block: 3.25rem;
-  margin-inline: 2rem;
+  padding-block: 3.25rem;
+  padding-inline: 2rem;
   text-align: center;
 }
 .hero__text .hero__title {
