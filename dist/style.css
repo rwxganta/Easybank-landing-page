@@ -146,7 +146,7 @@ a {
   text-align: center;
   background-color: hsl(0, 0%, 100%);
   border-radius: 7px;
-  display: grid;
+  display: none;
   gap: 1rem;
   align-items: center;
   position: fixed;
@@ -157,9 +157,7 @@ a {
   transform: translateX(-50%);
   z-index: 2;
   opacity: 0;
-  visibility: 0;
-  transition-property: opacity, visibility;
-  transition: 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
 }
 .header__menu-mobile a {
   font-weight: 400;
@@ -167,7 +165,6 @@ a {
 }
 .header.open .header__menu-hover {
   opacity: 1;
-  visibility: visible;
 }
 .header__cta {
   font-size: 0.875rem;
@@ -195,7 +192,7 @@ a {
 
 .header__menu.open ~ .header__menu-mobile {
   opacity: 1;
-  visibility: visible;
+  display: grid;
 }
 
 .hero {
