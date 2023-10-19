@@ -1,0 +1,88 @@
+footer {
+    padding-block: 2.4rem;
+    background-color: $Dark-Blue;
+    font-size: $font-small;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    @include breakpoint-up(large) {
+        padding-inline: 9rem;
+        flex-direction: row;
+        align-items: start;
+        //justify-content: space-between;
+        //gap: 8rem;
+    }
+
+    .logo-socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.9rem;
+
+        @include breakpoint-up(large) {
+            margin-inline-end: 5rem;
+        }
+
+        svg > g > path {
+            fill: $White;
+        }
+
+        .socials {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .social-icon img {
+                width: 1.5rem;
+
+                @include breakpoint-up(large) {
+                    width: 1.2rem;
+                }
+            }
+        }
+    }
+
+    .footer-nav {
+        color: $White;
+        font-weight: 400;
+
+        .nav-secondary {
+            //outline: 2px dotted tomato;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            
+
+            @include breakpoint-up(large) {
+                width: 250px;
+                max-height: 6rem;
+                align-items: start;
+                align-content: space-between;
+                flex-wrap: wrap;
+                gap: .7rem;
+            }
+        }
+    }
+
+    .cta-copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include breakpoint-up(large) {
+            margin-left: auto;
+            align-items: end;
+        }
+    }
+}
