@@ -55,7 +55,7 @@
         
         &__image {
             //outline: 2px dotted greenyellow;
-            outline-offset: -2px;
+            //outline-offset: -2px;
             height: 33rem;
             order: 2;
             flex-grow: 1;
@@ -65,20 +65,22 @@
             background-position: left 20% bottom 35%;
 
             &::before {
-                outline: 2px dotted lightseagreen;
-                outline-offset: -2px;
+                //outline: 2px dotted lightseagreen;
+                //outline-offset: -2px;
                 margin-inline: unset;
-                content: url(../images/image-mockups.png);
-                top: -27%;
-                left: 10%;
-                //top: 20%;
-                //background-size: 80%;
-                //background-position: center bottom 50%;
+                //content: url(../images/image-mockups.png);
+                inset: unset;
+                width: 100%;
+                min-height: 130%;
+                //top: -27%;
+                //top: 0;
+                //left: 17%;
+                //background-position: top 40% left 20%;
+                background-size: 94%;
+                //background-position: center 150%;
+                left: 22%;
 
-                background-image: none;
-                background-repeat: none;
-                background-size: none;
-                background-position: none;
+                //background-position: center bottom 50%;
             }
         }
 

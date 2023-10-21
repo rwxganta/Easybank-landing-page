@@ -241,7 +241,6 @@ a {
     display: flex;
   }
   .hero__image {
-    outline-offset: -2px;
     height: 33rem;
     order: 2;
     flex-grow: 1;
@@ -250,16 +249,12 @@ a {
     background-position: left 20% bottom 35%;
   }
   .hero__image::before {
-    outline: 2px dotted lightseagreen;
-    outline-offset: -2px;
     margin-inline: unset;
-    content: url(../images/image-mockups.png);
-    top: -27%;
-    left: 10%;
-    background-image: none;
-    background-repeat: none;
-    background-size: none;
-    background-position: none;
+    inset: unset;
+    width: 100%;
+    min-height: 130%;
+    background-size: 94%;
+    left: 22%;
   }
   .hero__text {
     margin-inline: unset;
