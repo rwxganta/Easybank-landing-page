@@ -408,10 +408,12 @@ a {
      object-position: center;
 }
 .articles__list .article__body {
-  padding: 1.7rem;
+  --spacer: .5em;
+  padding: 1.6rem;
   background-color: hsl(0, 0%, 100%);
 }
 .articles__list .article__author {
+  margin: 0;
   font-size: 0.7rem;
 }
 .articles__list .article__title {

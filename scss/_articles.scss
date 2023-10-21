@@ -61,11 +61,13 @@
             }
 
             &__body {
-                padding: 1.7rem;
+                --spacer: .5em;
+                padding: 1.6rem;
                 background-color: $White;
             }
 
             &__author {
+                margin: 0;
                 font-size: .7rem;
             }
 
