@@ -88,6 +88,7 @@
             }
 
             &__text {
+                margin-bottom: 0;
                 font-size: $font-small;
                 display: -webkit-box;
                 overflow: hidden;
@@ -97,6 +98,10 @@
                 // -webkit-line-clamp works fine on all modern web browser .-.
                 -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
+
+                @include breakpoint-up(medium) {
+                    -webkit-line-clamp: 4;
+                }
             }
         }
     }
