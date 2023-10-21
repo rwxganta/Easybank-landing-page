@@ -249,12 +249,15 @@ a {
     background-position: left 20% bottom 35%;
   }
   .hero__image::before {
+    outline: 2px dotted lightseagreen;
+    outline-offset: -2px;
     margin-inline: unset;
     inset: unset;
     width: 100%;
     min-height: 130%;
-    background-size: 94%;
-    left: 22%;
+    left: 20%;
+    background-position-x: left 10%;
+    background-size: cover;
   }
   .hero__text {
     margin-inline: unset;
