@@ -519,6 +519,12 @@ footer .footer-nav .nav-secondary {
     gap: 0.7rem;
   }
 }
+footer .footer-nav .nav-secondary a {
+  color: inherit;
+}
+footer .footer-nav .nav-secondary a:hover {
+  color: hsl(136, 65%, 51%);
+}
 footer .cta-copyright {
   display: flex;
   flex-direction: column;

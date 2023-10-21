@@ -77,6 +77,14 @@ footer {
                 flex-wrap: wrap;
                 gap: .7rem;
             }
+
+            a {
+                color: inherit;
+
+                &:hover {
+                    color: $Lime-Green;
+                }
+            }
         }
     }
 
