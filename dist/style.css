@@ -416,9 +416,15 @@ a {
 }
 .articles__list .article__title {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   color: hsl(233, 26%, 24%);
   text-wrap: balance;
+}
+.articles__list .article__title a {
+  color: inherit;
+}
+.articles__list .article__title a:focus, .articles__list .article__title a:hover {
+  color: hsl(136, 65%, 51%);
 }
 .articles__list .article__text {
   font-size: 0.875rem;

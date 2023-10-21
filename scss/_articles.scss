@@ -71,9 +71,18 @@
 
             &__title {
                 font-size: $font-xsmall;
-                font-weight: 300;
+                font-weight: 400;
                 color: $Dark-Blue;
                 text-wrap: balance;
+
+                a {
+                    color: inherit;
+
+                    &:focus,
+                    &:hover {
+                        color: $Lime-Green;
+                    }
+                }
             }
 
             &__text {
