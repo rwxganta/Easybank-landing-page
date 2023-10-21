@@ -12,8 +12,6 @@ footer {
         padding-inline: 9rem;
         flex-direction: row;
         align-items: start;
-        //justify-content: space-between;
-        //gap: 8rem;
     }
 
     .logo-socials {
@@ -38,11 +36,20 @@ footer {
             align-items: center;
             gap: 1rem;
 
-            .social-icon img {
-                width: 1.5rem;
+            .social-icon {
+                fill: $White;
+
+                a svg {
+                    display: block;
+
+                    &:hover {
+                        fill: $Lime-Green;
+                    }
+                }
 
                 @include breakpoint-up(large) {
                     width: 1.2rem;
+                    width: 100%;
                 }
             }
         }
@@ -53,16 +60,14 @@ footer {
         font-weight: 400;
 
         .nav-secondary {
-            //outline: 2px dotted tomato;
             margin: 0;
             padding: 0;
             list-style: none;
-            
+
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 1rem;
-            
 
             @include breakpoint-up(large) {
                 width: 250px;
