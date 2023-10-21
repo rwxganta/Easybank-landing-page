@@ -245,12 +245,10 @@ a {
     order: 2;
     flex-grow: 1;
     background-image: url(../images/bg-intro-desktop.svg);
-    background-size: 135%;
-    background-position: left 20% bottom 35%;
+    background-size: 145%;
+    background-position: left 17% bottom 30%;
   }
   .hero__image::before {
-    outline: 2px dotted lightseagreen;
-    outline-offset: -2px;
     margin-inline: unset;
     inset: unset;
     width: 100%;

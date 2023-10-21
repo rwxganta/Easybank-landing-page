@@ -54,19 +54,15 @@
         display: flex;
         
         &__image {
-            //outline: 2px dotted greenyellow;
-            //outline-offset: -2px;
             height: 33rem;
             order: 2;
             flex-grow: 1;
 
             background-image: url(../images/bg-intro-desktop.svg);
-            background-size: 135%;
-            background-position: left 20% bottom 35%;
+            background-size: 145%;
+            background-position: left 17% bottom 30%;
 
             &::before {
-                outline: 2px dotted lightseagreen;
-                outline-offset: -2px;
                 margin-inline: unset;
                 inset: unset;
                 width: 100%;
